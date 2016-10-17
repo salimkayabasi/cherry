@@ -1,12 +1,13 @@
-var chai = require('chai');
-var dirtyChai = require('dirty-chai');
-chai.use(dirtyChai);
-var expect = chai.expect;
+const chai = require('chai');
+const dirtyChai = require('dirty-chai');
 
-describe('Just adding a basic test example', function () {
-    describe('2 plus 2', function () {
-        it('should be 4', function () {
-            expect(2 + 2).to.be.equal(4);
-        })
-    })
+chai.use(dirtyChai);
+const expect = chai.expect;
+
+describe('Just adding a basic test example', () => {
+  describe('2 plus 2', () => {
+    it('should be 4', () => {
+      expect(2 + 2).to.be.equal(4);
+    });
+  });
 });
