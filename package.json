@@ -2,10 +2,11 @@
   "name": "cherry",
   "version": "1.0.0",
   "description": "yet another recipe book which is written with NodeJS and Polymer",
-  "main": "server.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require=env-test --recursive --ui bdd",
-    "lint": "./node_modules/.bin/eslint ."
+    "start": "node server.js",
+    "lint": "./node_modules/.bin/eslint . --fix",
+    "heroku-postbuild": "bash ./install/post-install.sh",
+    "test": "./node_modules/.bin/mocha --require=env-test --recursive --ui bdd"
   },
   "repository": {
     "type": "git",
