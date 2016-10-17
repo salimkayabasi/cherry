@@ -1,14 +1,14 @@
-var async = require('async');
-var config = require('config');
-var log = require('kapgel-logger')(module);
+const async = require('async');
+const config = require('config');
+const log = require('kapgel-logger')(module);
 
-module.exports = exports = function (callback) {
-  var app = require('express')();
+module.exports = exports = (callback) => {
+  const app = require('express')();
   async.seq(
-    function (cb) {
+    (cb) => {
       cb(null, app);
     }
-  )(function (err, server) {
+  )((err, server) => {
     if (err) {
       throw err;
     }
@@ -16,8 +16,8 @@ module.exports = exports = function (callback) {
       log.info('app started for testing');
       callback(app);
     } else {
-      var port = config.server.port;
-      server.listen(port, function (error) {
+      const port = config.server.port;
+      server.listen(port, (error) => {
         if (error) {
           throw error;
         }

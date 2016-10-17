@@ -1,9 +1,12 @@
-var config = require('config');
+const config = require('config');
+
 if (config.newrelic.key) {
-    require('newrelic');
+  require('newrelic');
 }
-require(process.cwd() + '/app/')();
-process.on('uncaughtException', function (err) {
-    var log = require('kapgel-logger')(module);
-    log.error('uncaughtException', err);
+require('./app/')();
+
+process.on('uncaughtException', (err) => {
+  const log = require('kapgel-logger')(module);
+
+  log.error('uncaughtException', err);
 });
