@@ -1,0 +1,24 @@
+{
+  "name": "cherry",
+  "version": "1.0.0",
+  "description": "yet another recipe book which is written with NodeJS and Polymer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salimkayabasi/cherry.git"
+  },
+  "author": "Salim KAYABASI <salim.kayabasi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salimkayabasi/cherry/issues"
+  },
+  "homepage": "https://github.com/salimkayabasi/cherry#readme",
+  "dependencies": {
+    "config": "^1.21.0",
+    "kapgel-logger": "^1.1.1",
+    "newrelic": "^1.31.0"
+  }
+}
