@@ -5,10 +5,13 @@ const log = require('kapgel-logger')(module);
 module.exports = exports = (callback) => {
   const app = require('express')();
   async.seq(
-    (cb) => {
-      cb(null, app);
+    (server, cb) => {
+      require('./express')(server, cb);
+    },
+    (server, cb) => {
+      require('./router')(server, cb);
     }
-  )((err, server) => {
+  )(app, (err, server) => {
     if (err) {
       throw err;
     }
