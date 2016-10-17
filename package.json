@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --require=env-test --recursive --ui bdd",
-    "lint": "./node_modules/.bin/eslint *.js"
+    "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",
